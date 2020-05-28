@@ -34,6 +34,9 @@ public class ChairDAOFakeImpl implements IChairDAO {
         return null;
     }
 
+
+
+
     @Override
     public List<Chair> getAll() {
         //  hard
