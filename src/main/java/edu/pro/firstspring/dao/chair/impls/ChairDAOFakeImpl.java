@@ -10,7 +10,10 @@ import java.util.List;
 
 @Repository
 public class ChairDAOFakeImpl implements IChairDAO {
-
+/*
+*     Stupid Fake Implementation
+*
+* */
    @Autowired
    FakeDataSet dataSet;
 
