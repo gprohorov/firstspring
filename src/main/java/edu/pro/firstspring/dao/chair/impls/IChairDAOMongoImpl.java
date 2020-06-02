@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public class ChairDAOMongoImpl implements IChairDAO {
+public class IChairDAOMongoImpl implements IChairDAO {
     @Override
     public Chair create(Chair chair) {
         return null;

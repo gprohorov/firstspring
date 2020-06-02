@@ -1,0 +1,29 @@
+Index: src/main/java/edu/pro/firstspring/dao/chair/impls/ChairDAOFakeImpl.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/main/java/edu/pro/firstspring/dao/chair/impls/ChairDAOFakeImpl.java	(revision c2a340cf5dd33658bdbdd45a6ef7fcd91e6dc9e0)
++++ src/main/java/edu/pro/firstspring/dao/chair/impls/ChairDAOFakeImpl.java	(date 1590685708581)
+@@ -10,7 +10,10 @@
+ 
+ @Repository
+ public class ChairDAOFakeImpl implements IChairDAO {
+-
++/*
++*     Stupid Fake Implementation
++*
++* */
+    @Autowired
+    FakeDataSet dataSet;
+ 
+@@ -37,6 +40,9 @@
+ 
+ 
+ 
++
++
++
+     @Override
+     public List<Chair> getAll() {
+         //  hard
