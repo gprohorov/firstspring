@@ -1,5 +1,6 @@
 package edu.pro.firstspring.controller.web;
 
+import edu.pro.firstspring.form.ChairForm;
 import edu.pro.firstspring.model.Chair;
 import edu.pro.firstspring.service.chair.impls.ChairServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,13 +33,14 @@ public class ChairWebController {
         return "redirect:/web/chair/get/list";
     }
 
-    @RequestMapping(value = "/create/", method = RequestMethod.GET)
-    String create(@RequestBody Chair chair) {
-      //  service.delete(id);
+    @RequestMapping(value = "/create", method = RequestMethod.GET)
+    String create(Model model) {
+        ChairForm form = new ChairForm();
+        model.addAttribute("form", form);
         return "addchairform";
     }
 
-    @RequestMapping(value = "/create/", method = RequestMethod.POST
+    @RequestMapping(value = "/create/", method = RequestMethod.POST)
     String create(@RequestBody Chair chair) {
       //  service.delete(id);
         return "addchairform";

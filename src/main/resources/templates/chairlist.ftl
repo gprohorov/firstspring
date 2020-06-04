@@ -9,6 +9,10 @@
 
 <h1 style="text-align: center">  Список кафедр </h1>
 
+
+<a href="/web/chair/create" type="button" class="btn btn-light"
+   style="float:right; margin-top:5px;"><i class="fa fa-plus-square-o"></i>Add new chair</a>
+
 <div>
 
     <table class="table table-striped">
@@ -19,8 +23,6 @@
             <th scope="col">DESC</th>
             <th scope="col">Delete</th>
             <th scope="col">Edit</th>
-
-
         </tr>
         </thead>
         <#list chairs as chair>

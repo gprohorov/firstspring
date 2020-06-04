@@ -11,9 +11,9 @@
         <fieldset>
             <legend>Add chair</legend>
             <form name="chair" action="" method="POST">
-                 name:<@spring.formInput "chairForm.name" "" "text"/>
+                 name:<@spring.formInput "form.name" "" "text"/>
                 <br>
-                DESC:<@spring.formInput "chairForm.desc" "" "text"/>
+                DESC:<@spring.formInput "form.desc" "" "text"/>
                 <input type="submit" value="Save"/>
             </form>
         </fieldset>
