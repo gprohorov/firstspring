@@ -15,8 +15,8 @@ public class FakeDataSet {
     private List<Chair> chairs = new ArrayList<>(
 
             Arrays.asList(
-                    new Chair("1", "Computer Systems and Networks"),
-                    new Chair("2", "Math. problems of Control and Cybernetics"),
+                    new Chair("1", "Computer Systems and Networks", "Desc"),
+                    new Chair("2", "Math. problems of Control and Cybernetics", "Desc"),
                     new Chair("3", "Software Engineering", "The best one")
             )
     );

@@ -2,12 +2,10 @@ package edu.pro.firstspring.dao.chair.impls;
 
 import edu.pro.firstspring.dao.chair.interfaces.IChairDAO;
 import edu.pro.firstspring.model.Chair;
-import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-@Repository
-public class IChairDAOMongoImpl implements IChairDAO {
+public class ChairDAOMongoImpl implements IChairDAO {
     @Override
     public Chair create(Chair chair) {
         return null;

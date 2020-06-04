@@ -1,4 +1,4 @@
-package edu.pro.firstspring.controller;
+package edu.pro.firstspring.controller.rest;
 
 
 import edu.pro.firstspring.model.Student;

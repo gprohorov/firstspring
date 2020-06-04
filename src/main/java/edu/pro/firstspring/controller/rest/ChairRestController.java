@@ -1,4 +1,4 @@
-package edu.pro.firstspring.controller;
+package edu.pro.firstspring.controller.rest;
 
 
 import edu.pro.firstspring.model.Chair;
@@ -20,7 +20,7 @@ public class ChairRestController {
 
 
   // GET ALL
-    @RequestMapping("/list")
+    @RequestMapping("/get/list")
     List<Chair>  getChairs(){
 
         return service.getAll();
