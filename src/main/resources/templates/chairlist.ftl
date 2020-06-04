@@ -28,7 +28,8 @@
                 <td>${chair.id}</td>
                 <td>${chair.name}</td>
                 <td>${chair.desc}</td>
-                <td><a href="/web/chair/delete/${chair.id}" type="button"  onclick="return confirm('Are you sure you want to delete ${chair.name} ?');"/>DELETE</td>
+                <td><a href="/web/chair/delete/${chair.id}" type="button" class="btn btn-outline-danger"  onclick="return confirm('Are you sure you want to delete ${chair.name} ?');">DELETE</a></td>
+                <td><a href="/web/chair/edit/${chair.id}" type="button" class="btn btn-outline-warning"  onclick="return confirm('Are you sure you want to edit ${chair.name} ?');">EDIT</a></td>
                 <td></td>
 
      </tr>

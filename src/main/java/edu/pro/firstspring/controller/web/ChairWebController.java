@@ -5,7 +5,7 @@ import edu.pro.firstspring.service.chair.impls.ChairServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -26,6 +26,23 @@ public class ChairWebController {
         return "chairlist";
     }
 
+    @RequestMapping(value = "/delete/{id}", method = RequestMethod.GET)
+    String delete(@PathVariable("id") String id){
+        service.delete(id);
+        return "redirect:/web/chair/get/list";
+    }
+
+    @RequestMapping(value = "/create/", method = RequestMethod.GET)
+    String create(@RequestBody Chair chair) {
+      //  service.delete(id);
+        return "addchairform";
+    }
+
+    @RequestMapping(value = "/create/", method = RequestMethod.POST
+    String create(@RequestBody Chair chair) {
+      //  service.delete(id);
+        return "addchairform";
+    }
 
 
 
