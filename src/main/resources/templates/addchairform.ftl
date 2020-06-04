@@ -1,3 +1,4 @@
+<#import "/spring.ftl" as spring/>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +10,7 @@
 
     <div>
         <fieldset>
-            <legend>Add chair</legend>
+            <legend>${action} chair</legend>
             <form name="chair" action="" method="POST">
                  name:<@spring.formInput "form.name" "" "text"/>
                 <br>

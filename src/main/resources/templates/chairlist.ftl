@@ -1,3 +1,4 @@
+<#import "/spring.ftl" as spring/>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,8 +11,6 @@
 <h1 style="text-align: center">  Список кафедр </h1>
 
 
-<a href="/web/chair/create" type="button" class="btn btn-light"
-   style="float:right; margin-top:5px;"><i class="fa fa-plus-square-o"></i>Add new chair</a>
 
 <div>
 
@@ -31,13 +30,17 @@
                 <td>${chair.name}</td>
                 <td>${chair.desc}</td>
                 <td><a href="/web/chair/delete/${chair.id}" type="button" class="btn btn-outline-danger"  onclick="return confirm('Are you sure you want to delete ${chair.name} ?');">DELETE</a></td>
-                <td><a href="/web/chair/edit/${chair.id}" type="button" class="btn btn-outline-warning"  onclick="return confirm('Are you sure you want to edit ${chair.name} ?');">EDIT</a></td>
+                <td><a href="/web/chair/update/${chair.id}" type="button" class="btn btn-outline-warning"  onclick="return confirm('Are you sure you want to edit ${chair.name} ?');">EDIT</a></td>
                 <td></td>
 
      </tr>
         </#list>
 
     </table>
+</div>
+
+<div >
+    <a href="/web/chair/create" type="button" class="btn btn-light">Add new chair</a>
 </div>
 
 </body>

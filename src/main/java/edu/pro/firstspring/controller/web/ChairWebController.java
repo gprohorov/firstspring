@@ -35,15 +35,48 @@ public class ChairWebController {
 
     @RequestMapping(value = "/create", method = RequestMethod.GET)
     String create(Model model) {
+        String action = "Add ";
         ChairForm form = new ChairForm();
         model.addAttribute("form", form);
+        model.addAttribute("action", action);
         return "addchairform";
     }
 
-    @RequestMapping(value = "/create/", method = RequestMethod.POST)
-    String create(@RequestBody Chair chair) {
-      //  service.delete(id);
+    @RequestMapping(value = "/create", method = RequestMethod.POST)
+    String create(@ModelAttribute("form") ChairForm form) {
+
+        Chair newChair = new Chair();
+        newChair.setName(form.getName());
+        newChair.setDesc(form.getDesc());
+        service.create(newChair);
+        return "redirect:/web/chair/get/list";
+    }
+
+
+    @RequestMapping(value = "/update/{id}", method = RequestMethod.GET)
+    String update(Model model, @PathVariable("id") String id) {
+        ChairForm form = new ChairForm();
+        Chair chairToUpdate = service.get(id);
+        String action = "Edit ";
+
+        form.setId(chairToUpdate.getId());
+        form.setName(chairToUpdate.getName());
+        form.setDesc(chairToUpdate.getDesc());
+
+        model.addAttribute("form", form);
+        model.addAttribute("action", action);
         return "addchairform";
+    }
+
+    @RequestMapping(value = "/update/{id}", method = RequestMethod.POST)
+    String update(@ModelAttribute("form") ChairForm form) {
+
+        Chair refreshedChair = new Chair();
+        refreshedChair.setId(form.getId());
+        refreshedChair.setName(form.getName());
+        refreshedChair.setDesc(form.getDesc());
+        service.update(refreshedChair);
+        return "redirect:/web/chair/get/list";
     }
 
 

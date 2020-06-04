@@ -44,6 +44,7 @@ public class ChairDAOFakeImpl implements IChairDAO {
 
     @Override
     public Chair update(Chair chair) {
+
         String id = chair.getId();
         int index = this.getAll().indexOf(chair);
         this.delete(id);

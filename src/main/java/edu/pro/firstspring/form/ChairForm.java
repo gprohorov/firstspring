@@ -4,8 +4,8 @@ import java.time.LocalDateTime;
 
 public class ChairForm {
     private String id;
-    private String name;
-    private String desc;
+    private String name  = "";
+    private String desc  = "";
 
     public ChairForm() {
     }
